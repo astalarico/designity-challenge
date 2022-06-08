@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        /> -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" type="text/css" href="css/slick.min.css" />
+
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+        <link rel="stylesheet" href="public/css/app.css" />
+        <script src="js/jquery.min.js" defer></script>
+        <script type="text/javascript" src="js/slick.min.js" defer></script>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+        <script src="public/js/app.js" defer></script>
+
+       
+        <title>Designity - Your On-Demand Virtual Creative Team</title>
+    </head>
+    <body>
+        <!-- Mobile Menu-->
+        <div 
+            id="mobile-menu"
+            class="z-20 fixed h-full bg-white w-full -left-[100%]"
+        >
+            <header class="flex justify-between item-center p-4"> 
+                <img
+                    src="assets/img/logo.svg"
+                    alt="Designity Logo"
+                    class="max-w-125"
+                />
+                <button 
+                    id="mobile-menu-close"
+                    type="button" 
+                    class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                >
+                    <span class="sr-only">Close menu</span>
+                    <!-- Heroicon name: outline/x -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+            </header>
+            <nav class="flex justify-center">
+                <ol class="items-center">
+                    <li class="flex justify-center items-center text-2xl font-bold p-4 bg-steel rounded-xl my-3">Company</li>
+                    <li class="flex justify-center items-center text-2xl font-bold p-4 bg-steel rounded-xl my-3">Categories</li>
+                    <li class="flex justify-center items-center text-2xl font-bold p-4 bg-steel rounded-xl my-3">Portfolio</li>
+                    <li class="flex justify-center items-center text-2xl font-bold p-4 bg-steel rounded-xl my-3">Resources</li>
+                 
+                </ol>
+            </nav>
+            <div class="text-2xl font-bold rounded-full bg-gold py-4 px-6 max-w-max mx-auto mt-6">
+                Create With Us
+            </div>
+            <img
+                src="assets/img/organic-shapes.svg"
+                alt="Organic Shapes"
+                class="w-full left-0 h-full "
+            />
+        </div>
+        <!-- End Mobile Menu -->
+        <!-- Header Section-->
+        <header class="sticky top-0 bg-steel flex justify-center z-10 top-0 left-0">
+            <div
+                id="top-header-innner"
+                class="flex justify-between w-full px-4 lg:px-8 py-3 2xl:max-w-[80vw] xl:max-w-[88vw] lg:max-w-100"
+            >
+                <button 
+                    id="mobile-menu-open"
+                    type="button" 
+                    class="px-4 border-r border-gray-200 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 lg:hidden"
+                >
+                    <span class="sr-only">Open sidebar</span>
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h7" />
+                    </svg>
+                </button>
+                <img
+                    src="assets/img/logo.svg"
+                    alt="Designity Logo"
+                    class="max-w-125 ml-auto lg:ml-0"
+                />
+                <nav id="main-nav" class="flex items-center hidden lg:block">
+                    <ol class="flex items-center">
+                        <li class="text-[14px] font-bold pr-9"><span>Company</span></li>
+                        <li class="text-[14px] font-bold pr-9"><span>Categories</span></li>
+                        <li class="text-[14px] font-bold pr-9"><span>Portfolio</span></li>
+                        <li class="text-[14px] font-bold pr-9"><span>Resources</span></li>
+                        <li
+                            class="text-[14px] font-bold rounded-full bg-gold py-3 px-5 cursor-[pointer]"
+                        >
+                            Create With Us
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </header>
+        <!-- End Header Section-->
+        <!-- Page Container Section-->
+        <Main id="page-container" class="relative top-[100px] lg:top-[45px]">
+            <!-- Hero Section -->
+            <section 
+                id="hero-section" 
+                class="flex mx-auto flex-col lg:flex-row 2xl:max-w-[80vw] xl:max-w-[88vw] lg:max-w-100 px-8 mb-24"
+            >
+                <div 
+                    data-aos="fade-right"
+                    id="hero-left" 
+                    class="w-full lg:w-[45%] flex flex-col items-center lg:items-start lg:justify-center"
+                >
+                    <h4
+                        id="join-community"
+                        class="text-[40px] font-black leading-[48px] pb-10 relative -z-10"
+                    >
+                        <img
+                            src="./assets/img/3d-blob.png"
+                            alt=""
+                            class="absolute max-w-[118px] -z-10 -top-[90px] -left-7 text-[17px]"
+                        />
+                        Join the future <br />
+                        of creative community
+                    </h4>
+                    <p
+                        class="text-[17px] text-[#777777] text-base leading-[20px] pb-10 max-w-[430px] "
+                    >
+                        We take pride in our forward-thinking dynamic culture that
+                        champions diversity and inclusivity, and fosters a
+                        respectful, fun, remote working environment.
+                    </p>
+                    <div id="hero-left-buttons" class="flex items-center pb-10">
+                        <button
+                            class="rounded-full bg-gold font-bold py-3 px-5 text-lg mr-16"
+                        >
+                            See open positions
+                        </button>
+                        <a href="#" class="text-lg font-bold">Read our funding</a>
+                    </div>
+                    <img
+                        src="assets/img/glass-door.png"
+                        alt="Glass Door 5 Star Rating"
+                        id="glass-door"
+                        class="max-w-[220px]"
+                    />
+                </div>
+                <div
+                    data-aos="fade-left"
+                    id="hero-right"
+                    class="sm:w-full sm:item-center lg:w-[55%] flex relative"
+                >
+                    <img
+                        src="assets/img/hero-right.png"
+                        alt="Right Side hero Image"
+                        class="max-w-[650px] w-full object-contain flex mx-auto lg:ml-auto"
+                    />
+                </div>
+            </section>
+            <!-- End Hero Section-->
+            <!-- Perks and Benefits Section-->
+            <section
+                id="perks-benefits"
+                class="relative flex items-center justify-center banner bg-[url('../../assets/img/gold-banner.png')] bg-no-repeat w-full bg-cover min-h-[40vw] p-8"
+            >
+                <img 
+                    src="assets/img/star-eyes.png" 
+                    alt="3D Smiley with Stars for eyes"
+                    class="absolute -top-[70px] left-[180px]"
+                >
+                <div class="inner-banner w-full 2xl:max-w-[80vw] xl:max-w-[88vw] lg:max-w-100 p-8">
+                    <h4 
+                        class="font-black text-[40px] text-center mb-12"
+                        id="perks-grid-header"
+                    >
+                        Perks & Benefits
+                    </h4>
+                    <article
+                        id="perks-grid" 
+                        class="justify-items-center grid justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-28 gap-y-16  "
+                    >
+                        <aside 
+                            id="perks-1" 
+                            class="max-w-[375px]"
+                            data-aos="fade-right"
+                        >
+                            <h3
+                                class="text-[26px] font-[800] leading-[26px] relative mb-6 ml-6"
+                            >
+                                Fully Remote
+                            </h3>
+                            <p class="text-[17px] leading-[20px]">
+                                Choose where you want to work and how you want to
+                                work. Say goodbye to commutes and uncomfortable desk
+                                chairs.
+                            </p>
+                        </aside>
+                        <aside 
+                            id="perks-2" 
+                            class="max-w-[375px]"
+                            data-aos="fade-up"
+                        >
+                            <h3
+                                class="text-[26px] font-[800] leading-[26px] relative mb-6 ml-6"
+                            >
+                                Flexible Hours
+                            </h3>
+                            <p class="text-[17px] leading-[20px]">
+                                Start your day early or later with a flexible work
+                                schedule made by you. Choose the hours you work to
+                                perform your best.
+                            </p>
+                        </aside>
+                        <aside 
+                            id="perks-3" 
+                            class="max-w-[375px]"
+                            data-aos="fade-left"
+                        >
+                            <h3
+                                class="text-[26px] font-[800] leading-[26px] relative mb-6 ml-6"
+                            >
+                                Fully Remote
+                            </h3>
+                            <p class="text-[17px] leading-[20px]">
+                                Choose where you want to work and how you want to
+                                work. Say goodbye to commutes and uncomfortable desk
+                                chairs.
+                            </p>
+                        </aside>
+                        <aside 
+                            id="perks-4" 
+                            class="max-w-[375px]"
+                            data-aos="fade-right"
+                        >
+                            <h3
+                                class="text-[26px] font-[800] leading-[26px] relative mb-6 ml-6"
+                            >
+                                Unlimited Vacation
+                            </h3>
+                            <p class="text-[17px] leading-[20px]">
+                                Love what you do on and off the clock. Never pass up
+                                another opportunity to get away from the computer
+                                and explore the world.
+                            </p>
+                        </aside>
+                        <aside 
+                            id="perks-5" 
+                            class="max-w-[375px]"
+                            data-aos="fade-up"
+                        >
+                            <h3
+                                class="text-[26px] font-[800] leading-[26px] relative mb-6 ml-6"
+                            >
+                                Flexible Hours
+                            </h3>
+                            <p class="text-[17px] leading-[20px]">
+                                Start your day early or later with a flexible work
+                                schedule made by you. Choose the hours you work to
+                                perform your best.
+                            </p>
+                        </aside>
+                        <aside 
+                            id="perks-6" 
+                            class="max-w-[375px]"
+                            data-aos="fade-left"
+                        >
+                            <h3
+                                class="text-[26px] font-[800] leading-[26px] relative mb-6 ml-6"
+                            >
+                                Unlimited Vacation
+                            </h3>
+                            <p class="text-[17px] leading-[20px]">
+                                Love what you do on and off the clock. Never pass up
+                                another opportunity to get away from the computer
+                                and explore the world.
+                            </p>
+                        </aside>
+                    </article>
+                </div>
+            </section>
+            <!-- End Perks and Benefits Section-->
+            <!-- Designity Values Carousel-->
+            <section class="w-full 2xl:max-w-[80vw] xl:max-w-[88vw] lg:max-w-100 p-8 mx-auto">
+                <h4 class="font-black text-[40px] text-center mb-[50px] mt-10">Designity Values</h4>
+                <div id="designity-values-carousel" class="carousel flex">
+                    <div class="mx-4">
+                        <img
+                            class="mx-auto"
+                            src="assets/img/clipboard-rotated.png"
+                            alt=""
+                        />
+                        <h3
+                            class="sm:text-[18px] md:text-[23px] font-[800] leading-[24px] relative mb-6 text-center mx-auto"
+                        >
+                            We're Innovative Thinkers
+                        </h3>
+
+                        <p class="sm:text-[16px] md:text-[18px] text-[#777777] leading-[20px] text-center  mx-auto">
+                            Perfection is never the goal, progress is. Our flexibility
+                            allows us to explore better options. &nbsp;We constantly seek 
+                            to implement new ideas.
+                        </p>
+                    </div>
+                    <div class="mx-4">
+                        <img class="mx-auto" src="assets/img/network.png" alt="" />
+                        <h3
+                            class="sm:text-[18px] md:text-[23px] font-[800] leading-[24px] relative mb-6 text-center mx-auto"
+                        >
+                            We're Feedback Seekers
+                        </h3>
+                        <p class="sm:text-[16px] md:text-[18px] text-[#777777] leading-[20px] text-center mx-auto">
+                            Seeking critique helps improve our work. We effectively
+                            ask for help where we need it. Feedback isn't personal,
+                            it's just business.
+                        </p>
+                    </div>
+                    <div class="mx-4">
+                        <img
+                            class="mx-auto"
+                            src="assets/img/profile-clipboard.png"
+                            alt=""
+                        />
+                        <h3
+                            class="sm:text-[18px] md:text-[23px] font-[800] leading-[24px] relative mb-6 text-center mx-auto"
+                        >
+                            We're Proactive Doers
+                        </h3>
+                        <p class="sm:text-[16px] md:text-[18px] text-[#777777] leading-[20px] text-center mx-auto">
+                            Our actions speak louder than our words. Staying
+                            organized helps us accomplish goals. We strive to meet
+                            the deadlines we set.
+                        </p>
+                    </div>
+                    <div class="mx-4">
+                        <img class="mx-auto" src="assets/img/network.png" alt="" />
+                        <h3
+                            class="sm:text-[18px] md:text-[23px] font-[800] leading-[24px] relative mb-6 text-center mx-auto"
+                        >
+                            We're Flexible
+                        </h3>
+                        <p class="sm:text-[16px] md:text-[18px] text-[#777777] leading-[20px] text-center max-w-[377px] mx-auto">
+                            Choose where you want to work and how you want to work.
+                            Say goodbye to commutes and uncomfortable desk chairs.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- End Designity Values Carousel-->
+            <!-- Mission Statement-->
+            <section 
+                id="mission-statement" 
+                class="flex justify-center w-full 2xl:max-w-[80vw] xl:max-w-[88vw] lg:max-w-100 sm:p-1 md:p-8 mx-auto min-h-[36vw] xl:min-h-[33vw] 2xl:min-h-[30vw] relative overflow-x-clip"
+                data-aos="zoom-in"
+            >
+                <div 
+                    id="mission-statement-left-shape-container" 
+                    alt="Pear Shaped Object Container" 
+                    class="max-w-[108px] object-contain top-[17vw] mr-auto relative"
+                >
+                    <img 
+                        id="mission-statement-left-shape" 
+                        src="assets/img/pear-shape.png" 
+                        alt="Pear Shaped Object" 
+                        class="max-w-[108px] w-[auto] object-contain top-[0] absolute left-[25px]"
+                    >
+                </div>
+                <div 
+                    id="mission-statement-text" 
+                    class="bg-[url('../../assets/img/organic-bg.png')] bg-no-repeat relative w-full bg-contain max-w-[60vw] 2xl:max-w-[50vw]"
+                >
+                    <p class="absolute top-1/2 left-1/2 -translate-y-1/4 -translate-x-2/4 font-bold leading-9 w-full text-center">
+                        Our mission is to disrupt the creative industry by transforming
+                        the way creatives and brands collaborate.
+                    </p>
+                </div>
+                <div 
+                    id="mission-statement-right-shape-container" 
+                    alt="Gold Shape Wearing Sunglasses" 
+                    class="max-w-[280px] object-contain top-[0] mr-auto relative"
+                >
+                    <img 
+                        id="mission-statement-right-shape" 
+                        src="assets/img/sunglasses.png" 
+                        alt="Gold Shape Wearing Sunglasses" 
+                        class="max-w-[280px] w-[auto] object-contain top-[-5vw] absolute left-[-35px]"
+                    >
+                </div>
+            </section>
+            <!-- End Mission Statement-->
+            <!-- Leadership Section -->
+            <section 
+                id="leadership"
+                class="mt-24 lg:mt-0"
+            >
+                <h4 id="leadership-header" class="font-black text-[40px] text-center">The Leadership</h4>
+                <div 
+                    id="leadership-cards" 
+                    class="flex flex-col xl:flex-row justify-center w-full 2xl:max-w-[85vw] xl:max-w-[95vw] lg:max-w-100 p-4 md:p-8 md:pb-0 mx-auto xl:mt-[145px]"
+                >
+                    <article 
+                        id="leadership-card-1"
+                        class="mt-32 md:mt-0 bg-steel md:flex mb-6 rounded-[20px] mx-5 md:mx-10 relative xl:w-[385px]"
+                        data-aos="fade-right"
+                    >
+                        <img 
+                            src="assets/img/shahrouz-card.png" 
+                            alt="Shahrouz Varshabi Profile" 
+                            class="max-h-max object-contain mx-auto absolute md:static xl:absolute left-1/2 xl:left-1/2 -translate-x-2/4 md:translate-x-0 xl:-translate-x-2/4 -top-[130px] max-w-[260px]"
+                        >
+                        <div class="card-content p-10 xl:p-0 mt-[175px] md:mt-0 xl:mt-[210px]">
+                            <h6 class="card-title text-gold font-bold text-center text-base">Founder & CEO</h6>
+                            <h3 class="card-name text-2xl font-bold text-center mb-2">Shahrouz Varshabi</h3>
+                            <p class="text-[17px] text-[#777777] xl:px-10 xl:pb-[4.5rem] pt-6 leading-[20.57px]">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+                            </p>
+                        </div>
+                    </article>
+                    <article 
+                        class="mt-32 md:mt-0 bg-steel md:flex mb-6 rounded-[20px] mx-5 md:mx-10 relative xl:w-[385px]  "
+                        id="leadership-card-2"
+                        data-aos="fade-up"
+                    >
+                        <img 
+                            src="assets/img/natalie-card.png" 
+                            alt="Natalie Neumann Profile" 
+                            class="max-h-max object-contain mx-auto absolute md:static xl:absolute left-1/2 xl:left-1/2 -translate-x-2/4 md:translate-x-0 xl:-translate-x-2/4 -top-[130px] max-w-[260px]"
+                        >
+                        <div class="card-content p-10 xl:p-0 mt-[175px] md:mt-0 xl:mt-[210px]">
+                            <h6 class="card-title text-gold font-bold text-center text-base">Chief Operating Officer at Designity</h6>
+                            <h3 class="card-name text-2xl font-bold text-center mb-2">Natalie Neumann</h3>
+                            <p class="text-[17px] text-[#777777] xl:px-10 xl:pb-[4.5rem] pt-6 leading-[20.57px]">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+                            </p>
+                        </div>
+                    </article>
+                    <article 
+                        class="mt-32 md:mt-0 bg-steel md:flex mb-6 rounded-[20px] mx-5 md:mx-10 relative xl:w-[385px]  "
+                        id="leadership-card-3"
+                        data-aos="fade-left"
+                    >
+                        <img 
+                            src="assets/img/joy-card.png" 
+                            alt="Joy Banfield Profile" 
+                            class="max-h-max object-contain mx-auto absolute md:static xl:absolute left-1/2 xl:left-1/2 -translate-x-2/4 md:translate-x-0 xl:-translate-x-2/4 -top-[130px] max-w-[260px]"
+                        >
+                        <div class="card-content p-10 xl:p-0 mt-[175px] md:mt-0 xl:mt-[210px]">
+                            <h6 class="card-title text-gold font-bold text-center text-base">VP of People</h6>
+                            <h3 class="card-name text-2xl font-bold text-center mb-2">Joy Banfield</h3>
+                            <p class="text-[17px] text-[#777777] xl:px-10 xl:pb-[4.5rem] pt-6 leading-[20.57px]">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+                <button class="text-[18px] font-bold rounded-full bg-gold py-3 px-6 flex mx-auto">
+                    Meet The Entire Team
+                </button>
+            </section>
+             <!-- End Leadership Section -->
+             <!-- Success Stories Section-->
+            <section id="success-stories-wrapper" class="w-full 2xl:max-w-[80vw] xl:max-w-[88vw] lg:max-w-100 p-8 mx-auto justify-center md:mt-20 sm:mt-5">
+                <h4 class="font-black text-[40px] text-center mr-auto w-[100%]">Success Stories</h4>
+                <div 
+                    id="success-stories" 
+                    class="sm:justify-center flex mr-auto w-[100%] relative sm:flex-direction-[column] sm:text-align-[center] sm:justify-content-[center] sm:align-items-[center]"
+                >
+                    <div 
+                        id="success-stories-left"
+                        data-aos="zoom-in-right"
+                    >
+                        <img 
+                            id="success-stories-kat-left" 
+                            src="assets/img/kat-left.png" 
+                            alt="" 
+                            class="max-w-[198px] h-[auto]  "
+                        >
+                    </div>
+                    <article 
+                        id="success-stories-text" 
+                        class="relative w-full bg-contain sm:max-w-[50vw] lg:max-w-[500px]"
+                    >
+                        <h4 class="font-black text-2xl">Kat Calejo</h4>
+                        <h6 class="card-title text-gold font-bold text-base pb-5">Senior Content Writer</h6>
+                        <p class="text-[#777777] leading-[21px]">
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry. Lorem Ipsum has been he 1500s,
+                            when an unknown printer took a galley of type and
+                            scrambled it to make a type specimen book. It has
+                            survived not only five centuries, but also the leap into
+                            electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </article>
+                    <div 
+                        id="success-stories-right" 
+                        class="max-w-[100%] h-[100%] w-[100%]  "
+                    >
+                        <img
+                            id="success-stories-kat-right"
+                            src="assets/img/kat-right.jpg"
+                            alt="Kat Calejo"
+                            class=" w-[450px] md-max-w-[33%] sm:mx-auto md:right-[0] sm:mt-[20px] md:-top-[40px] h-[100%]"
+                            data-aos="zoom-in-left"
+                        />
+                    </div>
+                </div>
+            </section>
+            <!-- End Success Stories Section-->
+            <!-- Hiring Process Section-->
+            <section
+                id="hiring-process"
+                class="flex flex-col justify-center banner bg-[url('../../assets/img/grey-banner.png')] bg-no-repeat w-full bg-cover min-h-[660px]"
+            >
+                <h4 class="font-black text-[40px] text-center">Hiring Process</h4>
+                <div id="hiring-process-carousel" class="carousel w-full 2xl:max-w-[80vw] xl:max-w-[88vw] lg:max-w-100 p-8 mx-auto flex">
+                    <div class="mx-4">
+                        <img
+                            class="mx-auto"
+                            src="assets/img/application.png"
+                            alt=""
+                        />
+                        <h3
+                            class="sm:text-[18px] md:text-[23px] font-[800] leading-[24px] relative mb-6 text-center mx-auto"
+                        >
+                            1. Interactive  Application 
+                        </h3>
+                        <p class="sm:text-[16px] md:text-[18px] text-[#777777] leading-[20px] text-center max-w-[380px] mx-auto">
+                            is simply dummy text of the printing and typesetting industry. been the industry's standard dummy text ever since the 1500s.
+                        </p>
+                    </div>
+                    <div class="mx-4">
+                        <img class="mx-auto" src="assets/img/video-call.png" alt="" />
+                        <h3
+                            class="sm:text-[18px] md:text-[23px] font-[800] leading-[24px] relative mb-6 text-center mx-auto"
+                        >
+                            2. Video / Introductory Call
+                        </h3>
+                        <p class="sm:text-[16px] md:text-[18px] text-[#777777] leading-[20px] text-center max-w-[380px] mx-auto">
+                            is simply dummy text of the printing and typesetting industry. been the industry's standard dummy text ever since the 1500s.
+
+                        </p>
+                    </div>
+                    <div class="mx-4">
+                        <img
+                            class="mx-auto"
+                            src="assets/img/challenge-project.png"
+                            alt=""
+                        />
+                        <h3
+                            class="sm:text-[18px] md:text-[23px] font-[800] leading-[24px] relative mb-6 text-center mx-auto"
+                        >
+                            3. Challenge Project
+                        </h3>
+                        <p class="sm:text-[16px] md:text-[18px] text-[#777777] leading-[20px] text-center max-w-[380px] mx-auto">
+                            is simply dummy text of the printing and typesetting industry. been the industry's standard dummy text ever since the 1500s.
+
+                        </p>
+                    </div>
+                    <div class="mx-4">
+                        <img class="mx-auto" src="assets/img/application.png" alt="" />
+                        <h3
+                            class="sm:text-[18px] md:text-[23px] font-[800] leading-[24px] relative mb-6 text-center mx-auto"
+                        >
+                            4. Interactive Application
+                        </h3>
+                        <p class="sm:text-[16px] md:text-[18px] md:text-[#777777] leading-[20px] text-center max-w-[380px] mx-auto">
+                            is simply dummy text of the printing and typesetting industry. been the industry's standard dummy text ever since the 1500s.
+
+                        </p>
+                    </div>
+                </div>
+            </section>
+            </section>
+            <!-- End Hiring Process Section-->
+            <!-- Join Us Section -->
+            <section id="join-us" class="-z-10">
+                <div id="join-us-image" class="relative w-52 mx-auto">
+                    <img src="assets/img/organic-shape-winking.png" alt="Gold Organic Shape Winking">
+                    <h4 class="font-black text-[40px] text-center absolute bottom-8 left-1/2 w-full -translate-x-2/4" >Join Us</h4>
+                </div>
+      
+                <nav class="flex justify-center">
+                    <ul class="grid grid-cols-2 md:flex">
+                        <li class="px-3 join-us relative text-2xl text-[#777] hover:text-gold hover:font-bold hover:cursor-pointer">All Departments</li>
+                        <li class="px-3 join-us relative text-2xl text-[#777] hover:text-gold hover:font-bold hover:cursor-pointer">Marketing</li>
+                        <li class="px-3 join-us relative text-2xl text-[#777] hover:text-gold hover:font-bold hover:cursor-pointer">Sales</li>
+                        <li class="px-3 join-us relative text-2xl text-[#777] hover:text-gold hover:font-bold hover:cursor-pointer">Creative</li>
+                    </ul>
+                </nav>
+                <div id="available-positions" class="w-full 2xl:max-w-[80vw] xl:max-w-[88vw] lg:max-w-100 p-8 mx-auto mb-24">
+                    <div class="flex py-4 border-y border-t-2 border-grey items-center" data-aos="fade-up">
+                        <div class="flex-1 text-2xl font-bold h-max">Customer Success Manager</div>
+                        <button class="rounded-full bg-gold px-8 py-4 font-bold">
+                            Read More
+                        </button>
+                    </div>
+                    <div class="flex py-4 border-y border-grey items-center" data-aos="fade-up">
+                        <div class="flex-1 text-2xl font-bold h-max">Account Executive</div>
+                        <button class="rounded-full bg-gold px-8 py-4 font-bold">
+                            Read More
+                        </button>
+                    </div>
+                    <div class="flex py-4 border-y border-grey items-center" data-aos="fade-up">
+                        <div class="flex-1 text-2xl font-bold h-max">Creative Director (Design Manager)</div>
+                        <button class="rounded-full bg-gold px-8 py-4 font-bold">
+                            Read More
+                        </button>
+                    </div>
+                    <div class="flex py-4 border-y border-grey items-center" data-aos="fade-up">
+                        <div class="flex-1 text-2xl font-bold h-max">Digital Marketing Specialist</div>
+                        <button class="rounded-full bg-gold px-8 py-4 font-bold">
+                            Read More
+                        </button>
+                    </div>
+                    <div class="flex py-4 border-y border-grey items-center" data-aos="fade-up">
+                        <div class="flex-1 text-2xl font-bold h-max">Account Executive</div>
+                        <button class="rounded-full bg-gold px-8 py-4 font-bold">
+                            Read More
+                        </button>
+                    </div>
+                    <div class="flex py-4 border-y border-grey items-center" data-aos="fade-up">
+                        <div class="flex-1 text-2xl font-bold h-max">Customer Success Manager</div>
+                        <button class="rounded-full bg-gold px-8 py-4 font-bold">
+                            Read More
+                        </button>
+                    </div>
+                    <div class="flex py-4 border-y border-grey border-b-2 items-center" data-aos="fade-up">
+                        <div class="flex-1 text-2xl font-bold h-max">Creative Director (Design Manager)</div>
+                        <button class="rounded-full bg-gold px-8 py-4 font-bold">
+                            Read More
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <!-- End Join Us Section-->
+        </Main>
+        <!-- End Page Content Section-->
+        <!-- Footer Section -->
+        <footer
+            class="banner bg-[url('../../assets/img/footer-banner.svg')] bg-no-repeat w-full bg-cover pb-20 flex items-center relative overflow-hidden overflow-visible"
+        >
+
+            <img
+                src="assets/img/organic-shapes.svg"
+                alt="Organic Shapes"
+                class="hidden lg:relative lg:flex left-0 h-full max-w-[12vw] lg:max-w-none top-6 mr-auto pr-4"
+            />
+            <div 
+                id="footer-about" 
+                class="w-full max-w-[100%] lg:max-w-[80vw] xl:max-w-[72vw] mt-28 lg:mr-auto lg:pr-12 p-8 relative"
+            >
+                <img src="assets/img/mug.png" alt="Designity Mug" class="absolute -top-[10vw] right-[10vw] max-w-[25vw]">
+                <img
+                    src="assets/img/logo.svg"
+                    alt="Designity Logo"
+                    class="w-[236px] mb-[75px]"
+                />
+                <!-- Footer Section -->
+                <div id="footer-about-items" class="md:flex md:justify-between grid grid-cols-2 gap-x-3 gap-y-3">
+      
+                    <div class="relative" data-aos="fade-right">
+                        <h6 class="text-2xl font-bold mb-4">Company</h6>
+                        <nav>
+                            <ul>
+                                <li class="mb-4 text-[18px]">Our Story</li>
+                                <li class="mb-4 text-[18px]">The Team</li>
+                                <li class="mb-4 text-[18px]">Portfolio</li>
+                                <li class="mb-4 text-[18px]">Case Studies</li>
+                                <li class="mb-4 text-[18px]">Careers</li>
+                                <li>Press</li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="relative" data-aos="fade-up">
+                        <h6 class="text-2xl font-bold mb-4">For Clients</h6>
+                        <nav>
+                            <ul>
+                                <li class="mb-4 text-[18px]">Login</li>
+                                <li class="mb-4 text-[18px]">Join as a Client</li>
+                                <li class="mb-4 text-[18px]">Book a Demo</li>
+                                <li class="mb-4 text-[18px]">Services</li>
+                                <li class="mb-4 text-[18px]">Pricing</li>
+                                <li class="mb-4 text-[18px]">Compare</li>
+                                <li class="mb-4 text-[18px]">Careers</li>
+                                <li class="mb-4 text-[18px]">Press</li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="relative" data-aos="fade-down">
+                        <h6 class="text-2xl font-bold mb-4">For Creatives</h6>
+                        <nav>
+                            <ul>
+                                <li class="mb-4 text-[18px]">Create with Us</li>
+                                <li class="mb-4 text-[18px]">Join as Creative</li>
+                                <li class="mb-4 text-[18px]">Director</li>
+                                <li class="mb-4 text-[18px]">Join as Creative</li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="relative" data-aos="fade-left">
+                        <h6 class="text-2xl font-bold mb-4">Resources</h6>
+                        <nav>
+                            <ul>
+                                <li class="mb-4 text-[18px]">Blog</li>
+                                <li class="mb-4 text-[18px]">Testimonials</li>
+                                <li class="mb-4 text-[18px]">Tunraround Calculator</li>
+                                <li class="mb-4 text-[18px]">FAQ</li>
+                                <li class="mb-4 text-[18px]">Call Us: (917) 259 6449</li>
+                                <li class="mb-4 break-words text-[18px]">Support@designity.com</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer Section-->
+        <!-- Copyright Section-->
+        <Section id="copyright-section" class="bg-gold flex-col lg:flex-row flex justify-around p-5 items-center">
+            <div
+                id="terms-policy"
+                class="flex items-center font-medium text-lg"
+            >
+                <span class="cursor-[pointer]">Terms of use</span>&nbsp;|&nbsp;<span class="cursor-[pointer]">Privacy Policy</span>
+            </div>
+            <div id="copyright" class="flex items-center relative">
+                <img
+                    src="assets/img/smile-hearts.png"
+                    alt="Hearts and Smile"
+                    class="absolute left-[1/2] sm:-left-32 bottom-[50px] lg:-bottom-[15px]"
+                />
+                <div id="copyright-text" class="font-bold text-lg">
+                    © 2022 Designity Inc. All Rights Reserved.
+                </div>
+            </div>
+        </Section>
+        <!-- End Copyright Section-->
+    </body>
+</html>
